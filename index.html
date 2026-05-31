@@ -80,11 +80,14 @@ animation:bounceCircle 2s infinite;
 50%{transform:translateY(-15px);}
 }
   .sparkle{
-  width:8px;
-  height:8px;
+    position: fixed;
+  width:7px;
+  height:7px;
   border-radius:50%;
-  background:rgba(255,255,255,.8);
-  box-shadow:0 0 10px white;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 0 12px rgba(255,255,255,.9);
+    animation:floatsparkle 4s infinite ease-in-out;
+    z-index: 1;
   }
 </style>
 </head>
