@@ -54,6 +54,29 @@ animation: bounce 1.8s infinite;
 @keyframes bounce {
 0%,100% { transform: translateX(-50%) translateY(0); }
 50% { transform: translateX(-50%) translateY(-8px); }
+}.bouncy-circle{
+position:fixed;
+right:20px;
+bottom:80px;
+width:90px;
+height:90px;
+border-radius:50%;
+background:linear-gradient(135deg,#ff8c00,#ff4fd8);
+color:white;
+font-weight:bold;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+text-decoration:none;
+box-shadow:0 0 20px rgba(255,255,255,.4);
+z-index:9999;
+animation:bounceCircle 2s infinite;
+}
+
+@keyframes bounceCircle{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
 }
 </style>
 </head>
@@ -177,7 +200,7 @@ Shelly Cool is a New York singer-songwriter, performer, storyteller, and creativ
 <p class="text-sm text-white/70">© 2026 Shelly Cool. All rights reserved.</p>
 </footer>
 
-<div class="bouncy-name">✨ Shelly Cool Singer ✨</div>
+<a href="#hero" class="bouncy-circle">Shelly<br>Cool</a>
 
 </body>
 </html>
