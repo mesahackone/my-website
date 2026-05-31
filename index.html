@@ -19,18 +19,28 @@ font-family: Arial, sans-serif;
 background: linear-gradient(135deg, #160026, #4b007d, #b83280, #ff8c00);
 overflow-x: hidden;
 }
-.sparkle {
-position: fixed;
-font-size: 22px;
-animation: floatSparkle 6s infinite ease-in-out;
-z-index: 1;
-opacity: .75;
-}
+
 @keyframes floatSparkle {
-0%,100% { transform: translateY(0) rotate(0deg); opacity:.5; }
-50% { transform: translateY(-25px) rotate(20deg); opacity:1; }
+0% {
+transform: translateY(0) scale(0.3);
+opacity: 0;
 }
-.glass {
+25% {
+opacity: 1;
+}
+50% {
+transform: translateY(-18px) scale(1);
+opacity: .9;
+}
+75% {
+opacity: .3;
+}
+100% {
+  transforn: translateY(-35px) scale(0.2);
+  opacity: 0;
+}
+}
+  .glass {
 background: rgba(255,255,255,.14);
 border: 1px solid rgba(255,255,255,.25);
 backdrop-filter: blur(10px);
