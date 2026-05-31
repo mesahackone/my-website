@@ -3,153 +3,125 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 <title>Shelly Cool | Music. Soul. Stories.</title>
-<meta name="description" content="Official website of Shelly Cool. Listen to Lovin This Day, explore music, videos, stories, and upcoming releases from Cool Love Season." />
-
-<!-- Social sharing -->
-<meta property="og:title" content="Shelly Cool | Music. Soul. Stories." />
+<meta name="description" content="Official website of Shelly Cool. Lovin This Day coming June 19, 2026. Cool Love Season EP coming July 17, 2026." />
+<meta property="og:title" content="Shelly Cool | Lovin This Day" />
 <meta property="og:description" content="Lovin This Day by Shelly Cool — coming June 19, 2026." />
 <meta property="og:image" content="loving-this-day-cover.png" />
-<meta property="og:type" content="website" />
-
-<!-- Google Analytics placeholder -->
-<!-- Add Google Analytics / Tag Manager code here later -->
-
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
 html { scroll-behavior: smooth; }
-
 body {
-background: linear-gradient(135deg, #2d0b45, #7b1fa2, #ff7a18);
+margin: 0;
 color: white;
 font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #160026, #4b007d, #b83280, #ff8c00);
+overflow-x: hidden;
 }
-
-.popout-wrap {
-position: relative;
-overflow: visible;
+.sparkle {
+position: fixed;
+font-size: 22px;
+animation: floatSparkle 6s infinite ease-in-out;
+z-index: 1;
+opacity: .75;
 }
-
-.popout-photo {
-position: relative;
-z-index: 10;
-transform: translateY(-18px) scale(1.05);
-filter: drop-shadow(0 25px 35px rgba(0,0,0,.45));
+@keyframes floatSparkle {
+0%,100% { transform: translateY(0) rotate(0deg); opacity:.5; }
+50% { transform: translateY(-25px) rotate(20deg); opacity:1; }
 }
-
 .glass {
-background: rgba(255,255,255,.13);
+background: rgba(255,255,255,.14);
+border: 1px solid rgba(255,255,255,.25);
 backdrop-filter: blur(10px);
-border: 1px solid rgba(255,255,255,.2);
+}
+.popout-photo {
+transform: translateY(-20px) scale(1.06);
+filter: drop-shadow(0 25px 35px rgba(0,0,0,.55));
+}
+.bouncy-name {
+position: fixed;
+bottom: 12px;
+left: 50%;
+transform: translateX(-50%);
+background: rgba(0,0,0,.65);
+padding: 8px 18px;
+border-radius: 999px;
+font-weight: bold;
+z-index: 50;
+animation: bounce 1.8s infinite;
+}
+@keyframes bounce {
+0%,100% { transform: translateX(-50%) translateY(0); }
+50% { transform: translateX(-50%) translateY(-8px); }
 }
 </style>
-
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "MusicGroup",
-"name": "Shelly Cool",
-"description": "Singer-songwriter and creative artist behind Lovin This Day and Cool Love Season.",
-"url": "https://shellycoolsinger.com"
-}
-</script>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<header class="sticky top-0 z-50 bg-black/60 backdrop-blur-md">
+<div class="sparkle" style="top:12%; left:8%;">✨</div>
+<div class="sparkle" style="top:28%; right:10%;">💫</div>
+<div class="sparkle" style="top:55%; left:5%;">✨</div>
+<div class="sparkle" style="bottom:20%; right:8%;">⭐</div>
+
+<header class="sticky top-0 z-40 bg-black/60 backdrop-blur-md">
 <nav class="max-w-6xl mx-auto px-4 py-4 flex flex-wrap justify-center gap-4 text-sm font-bold">
-<a href="#hero" class="hover:text-yellow-300">The Cool Zone</a>
-<a href="#listen" class="hover:text-yellow-300">Listen In</a>
-<a href="#moments" class="hover:text-yellow-300">Cool Moments</a>
-<a href="#about" class="hover:text-yellow-300">Meet Shelly</a>
-<a href="#signup" class="hover:text-yellow-300">Stay in the Loop</a>
-<a href="#gems" class="hover:text-yellow-300">Gems 4 U</a>
+<a href="#hero">The Cool Zone</a>
+<a href="#listen">Listen In</a>
+<a href="#moments">Cool Moments</a>
+<a href="#about">Meet Shelly</a>
+<a href="#signup">Stay in the Loop</a>
+<a href="#gems">Gems 4 U</a>
 </nav>
 </header>
 
-<!-- HERO SECTION -->
-<section id="hero" class="min-h-screen flex items-center px-6 py-16">
-<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+<section id="hero" class="min-h-screen flex items-center justify-center text-center px-6 py-16">
+<div class="max-w-5xl mx-auto">
+<h1 class="text-5xl md:text-7xl font-extrabold mb-3">🎵 Shelly Cool</h1>
+<p class="text-2xl md:text-3xl text-yellow-200 font-bold mb-5">Music. Soul. Stories.</p>
+<p class="text-xl mb-8">New single <strong>“Lovin This Day”</strong> coming June 19, 2026.</p>
 
-<div>
-<h1 class="text-5xl md:text-7xl font-extrabold mb-4">🎵 Shelly Cool</h1>
-<p class="text-2xl md:text-3xl mb-4 text-yellow-200 font-semibold">Music. Soul. Stories.</p>
-<p class="text-lg md:text-xl mb-8">
-New single <strong>“Lovin This Day”</strong> coming June 19, 2026.
-Step into the Cool Zone.
-</p>
-
-<div class="flex flex-wrap gap-4">
-<a href="#listen" class="bg-yellow-300 text-black px-6 py-3 rounded-full font-bold hover:bg-white">
-Listen / Pre-Save
-</a>
-<a href="#signup" class="bg-white text-purple-900 px-6 py-3 rounded-full font-bold hover:bg-yellow-200">
-Join My FANtastic People
-</a>
-</div>
-</div>
-
-<div class="popout-wrap flex justify-center">
-<div class="glass rounded-3xl p-4 max-w-sm">
+<div class="glass rounded-3xl p-4 max-w-sm mx-auto mb-8">
 <img src="hero.png" alt="Shelly Cool artist photo" class="popout-photo rounded-3xl w-full" />
 </div>
-</div>
 
+<div class="flex flex-wrap justify-center gap-4">
+<a href="#listen" class="bg-yellow-300 text-black px-6 py-3 rounded-full font-bold">Listen / Pre-Save</a>
+<a href="#signup" class="bg-white text-purple-900 px-6 py-3 rounded-full font-bold">Join My FANtastic People</a>
+</div>
 </div>
 </section>
 
-<!-- FEATURED RELEASE -->
 <section id="listen" class="px-6 py-16 bg-black/30">
 <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+<img src="loving-this-day-cover.png" alt="Lovin This Day single cover" class="rounded-3xl shadow-2xl w-full max-w-md mx-auto" />
 
-<div>
-<img src="loving-this-day-cover.png" alt="Lovin This Day single cover by Shelly Cool" class="rounded-3xl shadow-2xl w-full max-w-md mx-auto" />
-</div>
-
-<div>
+<div class="text-center md:text-left">
 <h2 class="text-4xl font-extrabold mb-4">Lovin This Day</h2>
-<p class="text-xl text-yellow-200 mb-4">New single coming June 19, 2026</p>
-<p class="mb-6">
-A feel-good celebration of joy, gratitude, love, and choosing to enjoy the beauty of today.
-</p>
-
-<div class="flex flex-wrap gap-4">
-<a href="#" class="bg-yellow-300 text-black px-6 py-3 rounded-full font-bold">
-Pre-Save / Listen Soon
-</a>
-<a href="#" class="bg-white text-purple-900 px-6 py-3 rounded-full font-bold">
-Buy / Stream — Coming June 19
-</a>
+<p class="text-yellow-200 text-xl mb-4">Coming June 19, 2026</p>
+<p class="mb-6">A joyful feel-good song about gratitude, love, celebration, and choosing to enjoy today.</p>
+<div class="flex flex-wrap gap-4 justify-center md:justify-start">
+<a href="#" class="bg-yellow-300 text-black px-6 py-3 rounded-full font-bold">Pre-Save / Listen Soon</a>
+<a href="#" class="bg-white text-purple-900 px-6 py-3 rounded-full font-bold">Buy / Stream — Coming June 19</a>
 </div>
 </div>
-
 </div>
 </section>
 
-<!-- COOL LOVE SEASON TEASER -->
 <section class="px-6 py-16">
 <div class="max-w-4xl mx-auto glass rounded-3xl p-8 text-center">
 <h2 class="text-4xl font-extrabold mb-4">Coming Soon: Cool Love Season</h2>
-<p class="text-lg mb-4">
-The upcoming EP from Shelly Cool, arriving July 17, 2026.
-</p>
-<p class="text-yellow-200">
-Featuring “Lovin This Day,” “Weekend,” “Ice Cream,” “Champagne,” and “I Thought I Was Your Woman.”
-</p>
+<p class="mb-4">The upcoming EP from Shelly Cool, arriving July 17, 2026.</p>
+<p class="text-yellow-200">Featuring “Lovin This Day,” “Weekend,” “Ice Cream,” “Champagne,” and “I Thought I Was Your Woman.”</p>
 </div>
 </section>
 
-<!-- YOUTUBE VIDEO -->
-<section id="moments" class="px-6 py-16 bg-black/30">
-<div class="max-w-5xl mx-auto text-center">
+<section id="moments" class="px-6 py-16 bg-black/30 text-center">
 <h2 class="text-4xl font-extrabold mb-6">Cool Moments</h2>
 <p class="mb-6">Watch, listen, and step into the Shelly Cool vibe.</p>
 
-<div class="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-black">
+<div class="max-w-4xl mx-auto aspect-video rounded-3xl overflow-hidden bg-black shadow-2xl">
 <iframe class="w-full h-full"
 src="https://www.youtube.com/embed/"
 title="Shelly Cool YouTube Video"
@@ -157,89 +129,55 @@ frameborder="0"
 allowfullscreen>
 </iframe>
 </div>
-
-<p class="mt-4 text-sm text-white/80">
-Add your YouTube video ID later inside the embed link.
-</p>
-</div>
+<p class="text-sm mt-3 text-white/80">Add your YouTube video ID after /embed/ later.</p>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="px-6 py-16">
-<div class="max-w-4xl mx-auto text-center">
+<div class="max-w-4xl mx-auto glass rounded-3xl p-8 text-center">
 <h2 class="text-4xl font-extrabold mb-6">Meet Shelly</h2>
 <p class="text-lg leading-relaxed">
-Shelly Cool is a singer-songwriter and creative storyteller bringing together R&B, soul,
-feel-good music, humor, and real-life inspiration. Her music celebrates love, joy,
-resilience, and the beautiful moments that make life worth singing about.
+Shelly Cool is a New York singer-songwriter, performer, storyteller, and creative personality bringing together R&B, soul, humor, fashion, and real-life inspiration. Her music is made for people who love feel-good grooves, honest stories, grown-up style, and songs that make everyday moments feel special.
 </p>
 </div>
 </section>
 
-<!-- MUSIC LOUNGE -->
-<section class="px-6 py-16 bg-black/30">
-<div class="max-w-5xl mx-auto text-center">
-<h2 class="text-4xl font-extrabold mb-6">Music Lounge</h2>
-<p class="mb-6">
-More music, videos, interviews, and featured vibes are coming soon.
-</p>
-</div>
-</section>
-
-<!-- SIGNUP -->
-<section id="signup" class="px-6 py-16">
+<section id="signup" class="px-6 py-16 bg-black/30">
 <div class="max-w-3xl mx-auto glass rounded-3xl p-8 text-center">
 <h2 class="text-4xl font-extrabold mb-4">Stay in the Loop</h2>
-<p class="mb-6">Join My FANtastic People for music updates, releases, videos, and special announcements.</p>
+<p class="mb-6">Join My FANtastic People for music updates, videos, releases, and special announcements.</p>
 
 <form action="https://formspree.io/f/mvzpeypj" method="POST" class="flex flex-col md:flex-row gap-4 justify-center">
-<input type="email" name="email" required placeholder="Enter your email"
-class="px-4 py-3 rounded-full text-black w-full md:w-2/3" />
-<button type="submit" class="bg-yellow-300 text-black px-6 py-3 rounded-full font-bold">
-Sign Up
-</button>
+<input type="email" name="email" required placeholder="Enter your email" class="px-4 py-3 rounded-full text-black w-full md:w-2/3" />
+<button type="submit" class="bg-yellow-300 text-black px-6 py-3 rounded-full font-bold">Sign Up</button>
 </form>
 </div>
 </section>
 
-<!-- GEMS 4 U -->
-<section id="gems" class="px-6 py-16 bg-black/30">
-<div class="max-w-5xl mx-auto text-center">
-<h2 class="text-4xl font-extrabold mb-6">Gems 4 U</h2>
-<p class="mb-6">
-Fashion, music, creativity, merch, and spotlight opportunities are coming soon.
-</p>
-</div>
+<section id="gems" class="px-6 py-16 text-center">
+<h2 class="text-4xl font-extrabold mb-4">Gems 4 U</h2>
+<p>Fashion, music, merch, artist spotlights, brand spotlights, and creative gems are coming soon.</p>
 </section>
 
-<!-- SPECIAL THANKS -->
-<section class="px-6 py-16">
+<section class="px-6 py-16 bg-black/30">
 <div class="max-w-4xl mx-auto glass rounded-3xl p-8 text-center">
 <h2 class="text-3xl font-extrabold mb-4">Special Thanks</h2>
-<p>
-AA & DL, Lady D, Donald Faison, friends and family, the Higher Power,
-and the fans for their support.
-</p>
+<p>AA & DL, Lady D, Donald Faison, friends and family, the Higher Power, and the fans for their support.</p>
 </div>
 </section>
 
-<!-- SOCIALS / FOOTER -->
-<footer class="px-6 py-10 bg-black text-center">
+<footer class="px-6 py-12 bg-black text-center pb-20">
 <h2 class="text-2xl font-bold mb-4">Connect with Shelly Cool</h2>
-
 <div class="flex flex-wrap justify-center gap-4 mb-6">
-<a href="https://instagram.com/shellycoolsinger" class="hover:text-yellow-300">Instagram</a>
-<a href="https://tiktok.com/@shellycoolsinger" class="hover:text-yellow-300">TikTok</a>
-<a href="https://x.com/shellycoolsingr" class="hover:text-yellow-300">X</a>
-<a href="https://youtube.com/@rhythmrichesradiance" class="hover:text-yellow-300">YouTube</a>
-<a href="https://facebook.com/myfantasticpeople" class="hover:text-yellow-300">Facebook</a>
+<a href="https://instagram.com/shellycoolsinger">Instagram</a>
+<a href="https://tiktok.com/@shellycoolsinger">TikTok</a>
+<a href="https://x.com/shellycoolsingr">X</a>
+<a href="https://youtube.com/@rhythmrichesradiance">YouTube</a>
+<a href="https://facebook.com/myfantasticpeople">Facebook</a>
 </div>
-
-<p class="text-sm text-white/70">
-© 2026 Shelly Cool. All rights reserved.
-</p>
+<p class="text-sm text-white/70">© 2026 Shelly Cool. All rights reserved.</p>
 </footer>
+
+<div class="bouncy-name">✨ Shelly Cool Singer ✨</div>
 
 </body>
 </html>
-
