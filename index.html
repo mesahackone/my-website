@@ -159,6 +159,9 @@ animation:bounceCircle 2s infinite;
 <div class="flex flex-wrap gap-4 justify-center md:justify-start">
 <a href="https://distrokid.com/hyperfollow/shellycool/lovin-this-day" class="bg-purple-600 text py-3 rounded-full">Pre-Save on Spotify</a>
 <a href="#" class="bg-white text-purple-900 px-6 py-3 rounded-full font-bold">Buy / Stream — Coming June 19</a>
+  <button onclick="shareSite()" class="bg-purple-700 text-white px-6 py-3 rounded-full font-bold">
+Share
+</button>
 </div>
 </div>
 </div>
@@ -233,6 +236,19 @@ Shelly Cool is a New York singer-songwriter, performer, storyteller, and creativ
 </footer>
 
 <a href="#hero" class="bouncy-circle">Shelly<br>Cool</a>
-
+<script>
+function shareSite() {
+if (navigator.share) {
+navigator.share({
+title: 'Shelly Cool',
+text: 'Check out Shelly Cool!',
+url: 'https://shellycool.com'
+});
+} else {
+navigator.clipboard.writeText('https://shellycool.com');
+alert('Website link copied!');
+}
+}
+</script>
 </body>
 </html>
